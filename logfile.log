@@ -1,0 +1,16 @@
+CRITICAL:root:integer division or modulo by zero
+DEBUG:root:we are in the main try loop
+CRITICAL:root:integer division or modulo by zero
+DEBUG:root:we are in the main try loop
+CRITICAL:root:integer division or modulo by zero
+DEBUG:root:we are in the main try loop
+CRITICAL:root:integer division or modulo by zero
+DEBUG:root:we are in the main try loop
+DEBUG:root:entered into the first else statement
+DEBUG:root:we are in the main try loop
+DEBUG:root:entered into the first else statement
+DEBUG:root:we are in the main try loop
+DEBUG:root:entered into the first if statement
+ERROR:root:urllib2 url visit failed, for the reason of global name 'urllib2' is not defined
+DEBUG:root:we are in the main try loop
+DEBUG:root:entered into the first if statement
