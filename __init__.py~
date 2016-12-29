@@ -157,7 +157,7 @@ class SFTPConnection:
 
 def _main():
 	parser=argparse.ArgumentParser(description='Reflect local filesystem changes on a remote system in real time, automatically.')
-	parser.add_argument('-c','--config-file', default='syncup.cfg',help='location of syncup configuration file')
+	parser.add_argument('-c','--config-file', default='syncup.cfg.dist',help='location of syncup configuration file')
 	args=parser.parse_args()
 	
 	try:
@@ -223,7 +223,7 @@ def _main():
 	try:
 		while True:
 			time.sleep(1)
-	except KeyBoardInterrupt:
+	except KeyboardInterrupt:
 		observer.stop()
 	observer.join()
 

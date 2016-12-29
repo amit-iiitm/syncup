@@ -72,6 +72,8 @@ class RemoteControl:
 			#make sure the intermediate destination path to this file actually exists on the remote machine
 			self._connection.execute('mkdir -p "'+ os.path.split(dest_path)[0] + '"')
 			# above command make all parent directories to the current path if they dont exist, otherwise make only the current directory
+			print "printing the source path ", src_path
+			print "printing the destn path ", dest_path
 			self._connection.put(src_path,dest_path)
 			#put command uploads a file to remote server
 		except Exception as e:
@@ -223,7 +225,7 @@ def _main():
 	try:
 		while True:
 			time.sleep(1)
-	except KeyBoardInterrupt:
+	except KeyboardInterrupt:
 		observer.stop()
 	observer.join()
 

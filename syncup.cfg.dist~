@@ -5,7 +5,7 @@
 ignore_patterns: ['*.swp', '*.DS_Store']
 
 # Hostname or IP address of the remote server.
-remote_host: 'amit48'
+remote_host: '192.168.43.204'
 
 # TCP port for the SSH service on the remote server.
 # The default port is 22.
@@ -13,19 +13,19 @@ remote_port: 22
 
 # SSH username for the remote server.
 # If blank, will use the username of the current user of the local machine.
-remote_username: 'amit'
+remote_username: 'himanshu'
 
 # Path to an SSH private key file to use for key authentication.
 # If blank, will attempt to automatically determine the correct private key file to use.
 private_key_file: '/home/amit/.ssh/id_rsa'
 
 # Password for the SSH private key file specified above, if necessary.
-private_key_password: 'amit48'
+private_key_password: ''
 
 # SSH password for the remote server.
 # If blank, will attempt to use key authentication for the username as specified/determined above.
 # If key authentication fails, you will be interactively prompted for a password.
-remote_password: 'amit48'
+remote_password: ''
 
 # ==== Path Configuration ====
 #
@@ -40,7 +40,7 @@ remote_password: 'amit48'
 # Top level directory location on the remote server; should be an absolute path *without tilde notation*
 # (should start with a leading slash.)
 # Should use UNIX-style forward slashes, since the remote server will be accessed via SFTP.
-remote_root_path: '/data'
+remote_root_path: '/home/amit/argo'
 
 # Top level directory location on the local machine. Should be an absolute path. Tilde notation is acceptable.
 local_root_path: '~/codes/loc1'
