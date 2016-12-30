@@ -32,4 +32,4 @@ Open two terminals:
 2. In the other terminal run the file 'run_chmod.py' by first navigating to its appropriate location
 
 
-The changes should be propagated within 10-20 seconds based upon the volume of changes 
+The changes should be propagated within 10-20 seconds 
