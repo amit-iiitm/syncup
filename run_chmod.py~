@@ -1,0 +1,11 @@
+import os
+import time
+import sys
+try:
+	while True:
+		time.sleep(0.1)
+		print "changing the permission associated with local files and folders"
+		os.system('sudo /home/amit/change_permission.sh')
+except KeyboardInterrupt:
+	sys.exit(1)
+	

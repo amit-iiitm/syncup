@@ -1,4 +1,5 @@
 import sys
+import os
 import time
 import logging
 from watchdog.observers import Observer
@@ -30,10 +31,12 @@ class syncWatchdog(PatternMatchingEventHandler):
 			logger.debug('Ignoring DirCreatedEvent for %s', event.src_path)
 		else:
 			self._remote_control.transfer_file(event.src_path)
+			
 
 	#on file delete event handler
 	def on_deleted(self,event):
 		self._remote_control.delete_resource(event.src_path)
+		
 	
 	#on file modified event handler
 	def on_modified(self,event):
@@ -42,10 +45,11 @@ class syncWatchdog(PatternMatchingEventHandler):
 			logger.debug('Ignoring DirModifiedEvent for %s' % event.src_path)
 		else:
 			self._remote_control.transfer_file(event.src_path)
-
+			
 	#on file moved event handler
 	def on_moved(self,event):
 		self._remote_control.move_resource(event.src_path, event.dest_path)
+		
 
 #remote control class defines methods to deal with data
 class RemoteControl:
@@ -74,8 +78,9 @@ class RemoteControl:
 			# above command make all parent directories to the current path if they dont exist, otherwise make only the current directory
 			print "printing the source path ", src_path
 			print "printing the destn path ", dest_path
+			#put command transfers the file to remote site
 			self._connection.put(src_path,dest_path)
-			#put command uploads a file to remote server
+			
 		except Exception as e:
 			logger.error('Caught exception while copying')
 			logger.exception(e)
